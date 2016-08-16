@@ -1,11 +1,11 @@
 {
   "name": "language-dut",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Atom language support for Dut",
   "license": "MIT",
   "engines": {
-	  "atom": "*",
-      "node": "*"
+    "atom": "*",
+    "node": "*"
   },
   "repository": {
     "type": "git",
