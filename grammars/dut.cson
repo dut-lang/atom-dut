@@ -1,0 +1,157 @@
+'name': 'Dut'
+'comment': 'Dut language'
+'scopeName': 'source.dut'
+'fileTypes': [
+  'dut'
+]
+'foldingStartMarker': '/\\*\\*|\\{\\s*$'
+'foldingStopMarker': '\\*\\*/|^\\s*\\}'
+'patterns': [
+  {
+    'captures':
+      '1':
+        'name': 'storage.type.class.dut'
+      '2':
+        'name': 'entity.name.type.class.dut'
+      '3':
+        'name': 'storage.modifier.extends.dut'
+      '4':
+        'name': 'entity.other.inherited-class.dut'
+    'match': '\\b(class)\\s+([a-zA-Z_](?:\\w|\\.)*)(?:\\s+(extends)\\s+([a-zA-Z_](?:\\w|\\.)*))?'
+    'name': 'meta.class.dut'
+  }
+  {
+    'captures':
+      '1':
+        'name': 'keyword.control.dut'
+      '2':
+        'name': 'entity.name.function'
+      '3':
+        'name': 'variable.parameter'
+    'match': '^\\s*(function)\\s*([a-zA-Z0-9_]*)\\s*\\(([a-zA-Z0-9_\\s,\\.\{\}\\[\\]\"#=]*)\\)'
+    'name': 'other.function'
+  }
+  {
+    'captures':
+      '1':
+        'name': 'entity.name.function'
+      '2':
+        'name': 'variable.parameter'
+    'match': '^\\s*(constructor)\\s*\\((.*)\\)'
+    'name': 'other.constructor'
+  }
+  {
+    'captures':
+      '1':
+        'name': 'support.function'
+    'match': '^\\s*(::[a-zA-Z0-9_]*)'
+    'name': 'other.global'
+  }
+  {
+    'match': '\\b(if|else|while|do|switch|case|break|for|foreach|return|throw|yield|continue|try|catch|resume|default)\\b'
+    'name': 'keyword.control.dut'
+  }
+  {
+    'match': '\\b(local|class|function|constructor|enum)\\b'
+    'name': 'storage.type.dut'
+  }
+  {
+    'match': '\\b(extends|static|const)\\b'
+    'name': 'storage.modifier.dut'
+  }
+  {
+    'match': '\\b(delete|in|clone|instanceof|typeof)\\b'
+    'name': 'keyword.operator.dut'
+  }
+  {
+    'match': '\\btrue\\b'
+    'name': 'constant.language.boolean.true.dut'
+  }
+  {
+    'match': '\\bfalse\\b'
+    'name': 'constant.language.boolean.false.dut'
+  }
+  {
+    'match': '\\bnull\\b'
+    'name': 'constant.language.null.dut'
+  }
+  {
+    'match': '\\b(base|this)\\b'
+    'name': 'variable.language.dut'
+  }
+  {
+    'match': '!|%|&|\\*|\\-\\-|\\-|\\+\\+|\\+|==|=|!=|<=>|<=|>=|<-|>>>|<<|>>|<|>|!|&&|\\|\\||\\?\\:|\\*=|(?<!\\()/=|%=|\\+=|\\-=|&=|%=|\\b(in|instanceof|typeof)\\b'
+    'name': 'keyword.operator.dut'
+  }
+  {
+    'match': '\\;'
+    'name': 'punctuation.terminator.statement.dut'
+  }
+  {
+    'match': '\\b((0(x|X)[0-9a-fA-F]+)|([0-9]+(\\.[0-9]+)?))\\b'
+    'name': 'constant.numeric.dut'
+  }
+  {
+    'begin': '\''
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.string.begin.dut'
+    'end': '\''
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.string.end.dut'
+    'name': 'string.quoted.single.dut'
+  }
+  {
+    'begin': '"'
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.string.begin.dut'
+    'end': '"'
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.string.end.dut'
+    'name': 'string.quoted.double.dut'
+    'patterns': [
+      {
+        'match': '\\\\.'
+        'name': 'constant.character.escape.dut'
+      }
+    ]
+  }
+  {
+    'begin': '/\\*\\*(?!/)'
+    'captures':
+      '0':
+        'name': 'punctuation.definition.comment.dut'
+    'end': '\\*/'
+    'name': 'comment.block.documentation.dut'
+  }
+  {
+    'begin': '/\\*'
+    'captures':
+      '0':
+        'name': 'punctuation.definition.comment.dut'
+    'end': '\\*/'
+    'name': 'comment.block.dut'
+  }
+  {
+    'captures':
+      '1':
+        'name': 'punctuation.definition.comment.dut'
+    'match': '(//).*$\\n?'
+    'name': 'comment.line.double-slash.dut'
+  }
+  {
+    'match': '\\{|\\}'
+    'name': 'meta.brace.curly.dut'
+  }
+  {
+    'match': '\\(|\\)'
+    'name': 'meta.brace.round.dut'
+  }
+  {
+    'match': '\\[|\\]'
+    'name': 'meta.brace.square.dut'
+  }
+]
