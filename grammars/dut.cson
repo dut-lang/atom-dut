@@ -52,7 +52,7 @@
     'name': 'keyword.control.dut'
   }
   {
-    'match': '\\b(local|class|function|constructor|enum)\\b'
+    'match': '\\b(var|class|function|constructor|enum)\\b'
     'name': 'storage.type.dut'
   }
   {
